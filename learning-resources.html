@@ -59,8 +59,8 @@
             margin-bottom: 15px;
         }
 
-         /* 全局样式，设置 a 标签的基础样式（应用到其他地方的链接） */
-         a {
+        /* 全局样式，设置 a 标签的基础样式（应用到其他地方的链接） */
+        a {
             color: #00b0ff;  /* 链接颜色 */
             font-weight: 600;  /* 加粗字体 */
             text-decoration: none; /* 去掉下划线 */
@@ -80,25 +80,21 @@
         header nav a:hover {
             text-decoration: none; /* 鼠标悬停时显示下划线 */
         }
-    
 
         /* 侧边目录栏样式 */
         .sidebar {
             position: fixed;
             top: 50px;
-            left: -220px;  /* 初始位置隐藏在屏幕外面 */
+            left: 0;  /* 默认显示 */
             width: 200px;
-            background-color: #fff;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.8);  /* 半透明背景 */
             padding: 15px;
             box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             transition: transform 0.3s ease, left 0.3s ease;
             border-radius: 10px;
-        }
-
-        /* 鼠标悬停时目录栏滑动到屏幕内 */
-        .sidebar:hover {
-            left: 0;  /* 鼠标悬停时显示 */
+            backdrop-filter: blur(10px); /* 增加模糊效果，使背景内容更可见 */
         }
 
         .sidebar h3 {
@@ -202,6 +198,11 @@
             font-size: 1.2rem;
             cursor: pointer;
             z-index: 2000;
+        }
+
+        /* 侧边栏隐藏样式 */
+        .sidebar.hidden {
+            left: -220px;  /* 隐藏在左侧 */
         }
     </style>
 </head>
@@ -328,7 +329,7 @@
         const toggleBtn = document.getElementById('toggle-sidebar-btn');
 
         toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
+            sidebar.classList.toggle('hidden');  // 切换 hidden 类
         });
 
         // 平滑滚动效果
