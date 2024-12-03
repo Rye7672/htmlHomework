@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系方式 - 黑麦</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* 基本样式 */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #121212;
+            color: #f4f4f4;
+        }
+
+        /* 统一导航栏样式 */
+        header {
+            background-color: #212121; /* 深色背景 */
+            padding: 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #1E90FF; /* 蓝色 */
+            border-bottom: 2px solid #1E90FF; /* 蓝色悬停 */
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin: 0;
+        }
+
+        /* 联系部分样式 */
+        .contact {
+            text-align: center;
+            max-width: 800px;
+            margin: 50px auto;
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #bbb;
+        }
+
+        .contact ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            color: #bbb;
+        }
+
+        .contact ul li {
+            font-size: 1.2rem;
+            margin: 15px 0;
+        }
+
+        .contact ul li a {
+            color: #00b0ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact ul li a:hover {
+            color: #0099cc;
+        }
+
+        footer {
+            background: #222;
+            color: #aaa;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .contact h2 {
+                font-size: 2rem;
+            }
+
+            .contact p {
+                font-size: 1rem;
+            }
+
+            .contact ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="logo">
+            <h1>黑麦的个人网站</h1>
+        </div> -->
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="app.html">应用展示</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h2>联系方式</h2>
+        <p>真的吗真的要联系我吗我的天哪🥹荣幸之至！</p>
+        <ul>
+            <li>QQ：2430107419</li>
+            <li>微信：Rye7672</li>
+            <li>工作邮箱: <a href="mailto:Rye7672@outlook.com">Rye7672@outlook.com</a></li>
+            <li>GitHub: <a href="https://github.com/Rye7672" target="_blank">Rye7672</a></li>
+            <li>CSDN: <a href="https://blog.csdn.net/2302_78755123?spm=1000.2115.3001.5343" target="_blank">黑-麦</a></li>
+            <li>一直没更新的博客: <a href=" http://Rye7672.github.io" target="_blank">基于Hexo框架的个人博客</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 黑麦 | 版权所有</p>
+    </footer>
+</body>
+</html>

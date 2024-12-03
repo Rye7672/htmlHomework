@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用名称 1 - 详细介绍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1a1a1a;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #222;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00b0ff;
+        }
+
+        .app-detail {
+            text-align: center;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #2c2c2c;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-detail:hover {
+            transform: scale(1.02);
+        }
+
+        .app-detail h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00b0ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .app-detail p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #bbb;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-detail h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            color: #fff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #00b0ff;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 30px;
+        }
+
+        .cta-btn:hover {
+            background-color: #0099cc;
+            transform: scale(1.05);
+        }
+
+        /* 图文混排效果 */
+        .app-feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #3a3a3a;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-feature:hover {
+            transform: scale(1.05);
+        }
+
+        .app-feature img {
+            max-width: 30%; /* 缩小最左侧图片 70% */
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer; /* 鼠标悬停时变为可点击 */
+        }
+
+        .app-feature .text {
+            max-width: 55%; /* 调整文字区域宽度 */
+            color: #ddd;
+            text-align: left;
+        }
+
+        /* 子版块 */
+        .app-feature-four {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .feature-item {
+            width: 48%;
+            background: #4a4a4a;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .feature-item img {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .feature-item .text {
+            color: #ddd;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #aaa;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .app-detail {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .app-feature {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .app-feature img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .app-feature .text {
+                max-width: 80%;
+            }
+
+            .app-feature-four {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .app-detail h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="app.html">应用展示</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="app-detail">
+        <h2>今天吃啥</h2>
+        <p>终结炫饭困难，快乐炫饭！</p>
+
+        <!-- 第一个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/sh3.png" alt="垃圾分类小游戏" onclick="viewImage('images/sh3.png')">
+            <div class="text">
+                <h3>默认转盘</h3>
+                <p>精心设计转盘，调整色彩搭配，激发食欲！</p>
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/sh1.png" alt="更多功能" onclick="viewImage('images/sh1.png')">
+                        <div class="text">
+                            <h4>默认数据源可靠</h4>
+                            <p>默认三组数据为多方收集结合个人体验制作，涵盖工大西苑各大美食，真实可靠！</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <img src="images/sh2.png" alt="更多功能" onclick="viewImage('images/sh2.png')">
+                        <div class="text">
+                            <h4>界面简洁</h4>
+                            <p>界面设计简洁，零广告！转盘动画流畅迅速，结果显示清晰</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/sh5.png" alt="商品码扫描接入" onclick="viewImage('images/sh5.png')">
+            <div class="text">
+                <h3>支持自定义</h3>
+                <p>数据持久化，支持完全自定义抽取组和抽取内容</p>
+
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/sh6.png" alt="更多功能" onclick="viewImage('images/sh6.png')">
+                        <div class="text">
+                            <h4>人性化输入</h4>
+                            <p>支持单项输入与一次性多项输入，人性化体验</p>
+                        </div>
+                    </div>
+                        <div class="feature-item">
+                            <img src="images/sh4.png" alt="更多功能" onclick="viewImage('images/sh4.png')">
+                            <div class="text">
+                                <h4>极速选择</h4>
+                                <p>快速选择当前转盘内容！</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第三个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/sh7.png" alt="商品码扫描接入" onclick="viewImage('images/sh7.png')">
+            <div class="text">
+                <h3>桌面小组件</h3>
+                <p>不用点进app，桌面上就能查看今日推荐吃啥，秒速解决炫饭难题！</p>
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/sh8.png" alt="更多功能" onclick="viewImage('images/sh8.png')">
+                        <div class="text">
+                            <h4>只在饭点推荐</h4>
+                            <p>推荐时间精心设计，饭点外均为“别吃啦”！KO嘴馋大学生</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 用户评价 -->
+        <h3>用户评价</h3>
+        <p>用户 A: "慢慢上手，对生活中的垃圾分类了解了不少！"</p>
+        <p>用户 B: "寓教于乐，潜移默化就懂了"</p>
+        <p>用户 C: "界面简洁易用，强烈推荐！"</p>
+        <br>
+        <hr>
+        <br>
+        <p>没有开发者账号，下载不了，想玩的可以联系我实机游玩或者给你项目zip</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 黑麦 | 版权所有</p>
+    </footer>
+
+    <!-- 图片查看 Modal -->
+    <div id="image-modal" style="display:none;">
+        <div style="background: rgba(0, 0, 0, 0.7); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000;">
+            <img id="modal-image" src="" style="max-width: 80%; max-height: 80%; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+    </div>
+
+    <script>
+        // 点击图片查看大图
+        function viewImage(imageUrl) {
+            document.getElementById("modal-image").src = imageUrl;
+            document.getElementById("image-modal").style.display = "block";
+        }
+
+        // 点击大图外部关闭查看
+        document.getElementById("image-modal").onclick = function() {
+            this.style.display = "none";
+        }
+    </script>
+</body>
+</html>

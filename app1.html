@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>应用名称 1 - 详细介绍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #1a1a1a;
+            color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #222;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00b0ff;
+        }
+
+        .app-detail {
+            text-align: center;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #2c2c2c;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-detail:hover {
+            transform: scale(1.02);
+        }
+
+        .app-detail h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #00b0ff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .app-detail p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #bbb;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-detail h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            color: #fff;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #00b0ff;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 30px;
+        }
+
+        .cta-btn:hover {
+            background-color: #0099cc;
+            transform: scale(1.05);
+        }
+
+        /* 图文混排效果 */
+        .app-feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #3a3a3a;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-feature:hover {
+            transform: scale(1.05);
+        }
+
+        .app-feature img {
+            max-width: 30%; /* 缩小最左侧图片 70% */
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer; /* 鼠标悬停时变为可点击 */
+        }
+
+        .app-feature .text {
+            max-width: 55%; /* 调整文字区域宽度 */
+            color: #ddd;
+            text-align: left;
+        }
+
+        /* 子版块 */
+        .app-feature-four {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .feature-item {
+            width: 48%;
+            background: #4a4a4a;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .feature-item img {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .feature-item .text {
+            color: #ddd;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #aaa;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .app-detail {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .app-feature {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .app-feature img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .app-feature .text {
+                max-width: 80%;
+            }
+
+            .app-feature-four {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .app-detail h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="app.html">应用展示</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="app-detail">
+        <h2>绿源</h2>
+        <p>寓教于乐，在环保上一较高下！</p>
+
+        <!-- 第一个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ss9.png" alt="垃圾分类小游戏" onclick="viewImage('images/ss9.png')">
+            <div class="text">
+                <h3>垃圾分类小游戏</h3>
+                <p>在屏幕中心随机生成生活中常见垃圾，用户需在30秒内通过拖动到对应垃圾桶，对其进行垃圾分类</p>
+                <p>通过游戏化方式，让用户轻松掌握垃圾分类技巧，帮助减少资源浪费。</p>
+
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/ss7.png" alt="更多功能" onclick="viewImage('images/ss7.png')">
+                        <div class="text">
+                            <h4>支持高分榜</h4>
+                            <p>在30s限制时间内一争高下！看看谁才是垃圾分类之王！🫅</p>
+                            <p>（暂未优化输入姓名为空的情况）</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <img src="images/ss10.png" alt="更多功能" onclick="viewImage('images/ss10.png')">
+                        <div class="text">
+                            <h4>内置提示功能</h4>
+                            <p>不知道答案时可以合理使用提示功能！ps：使用提示后分数不会增加噢！</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <img src="images/ss11.png" alt="更多功能" onclick="viewImage('images/ss11.png')">
+                        <div class="text">
+                            <h4>添加震动传感与对错显示</h4>
+                            <p>添加震动传感与图片显示，答题后可以轻松知晓自己答案正确与否！</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ss8.png" alt="商品码扫描接入" onclick="viewImage('images/ss8.png')">
+            <div class="text">
+                <h3>商品码扫描接入</h3>
+                <p>只需扫描商品条形码，即可自动获取商品的环保信息和相关分类建议。</p>
+                <p>(开发中，相关AI大模型正在接入，目前只接入了很少数据的一个API，通过网络请求访问)</p>
+
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/ss4.png" alt="更多功能" onclick="viewImage('images/ss4.png')">
+                        <div class="text">
+                            <h4>隐私安全</h4>
+                            <p>访问时询问相机隐私，保护个人信息安全</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第三个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ss5.png" alt="商品码扫描接入" onclick="viewImage('images/ss5.png')">
+            <div class="text">
+                <h3>人工智能实时问答</h3>
+                <p>人工智能赋能，实时答疑，轻松解决分类困难，搞定分类知识学习！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 第四个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ss2.png" alt="商品码扫描接入" onclick="viewImage('images/ss2.png')">
+            <div class="text">
+                <h3>知识测试</h3>
+                <p>题库抽取垃圾分类简单问题，巩固学习到的知识，回答后还可解锁对应徽章奖励！</p>
+                <p>（开发中，仅设计了UI）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 用户评价 -->
+        <h3>用户评价</h3>
+        <p>用户 A: "慢慢上手，对生活中的垃圾分类了解了不少！"</p>
+        <p>用户 B: "寓教于乐，潜移默化就懂了"</p>
+        <p>用户 C: "界面简洁易用，强烈推荐！"</p>
+        <br>
+        <hr>
+        <br>
+        <p>没有开发者账号，下载不了，想玩的可以联系我实机游玩或者给你项目zip</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 黑麦 | 版权所有</p>
+    </footer>
+
+    <!-- 图片查看 Modal -->
+    <div id="image-modal" style="display:none;">
+        <div style="background: rgba(0, 0, 0, 0.7); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000;">
+            <img id="modal-image" src="" style="max-width: 80%; max-height: 80%; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+    </div>
+
+    <script>
+        // 点击图片查看大图
+        function viewImage(imageUrl) {
+            document.getElementById("modal-image").src = imageUrl;
+            document.getElementById("image-modal").style.display = "block";
+        }
+
+        // 点击大图外部关闭查看
+        document.getElementById("image-modal").onclick = function() {
+            this.style.display = "none";
+        }
+    </script>
+</body>
+</html>

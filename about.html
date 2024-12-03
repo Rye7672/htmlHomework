@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 黑麦</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css"> <!-- 保持导航栏样式不变 -->
+    <style>
+        .about {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding: 40px 20px;
+            background-color: #2a2a2a;
+            color: #e0e0e0;
+            margin-top: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .about h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        /* 个人介绍卡片 */
+        .profile-card {
+            display: flex;
+            align-items: center;
+            background: #3a3a3a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-right: 20px;
+        }
+
+        .profile-info h3 {
+            font-size: 24px;
+            color: #fff;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            color: #aaa;
+            margin: 5px 0;
+        }
+
+        .profile-info p:first-of-type {
+            color: #1E90FF; /* 强调第一行 */
+            font-weight: bold;
+        }
+
+        h3 {
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏保留原样 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="app.html">应用展示</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 个人介绍部分 -->
+    <section class="about">
+        <h2>个人简介</h2>
+
+        <!-- 个人介绍卡片 -->
+        <div class="profile-card">
+            <div>
+                <img src="images/my-photo.jpg" alt="黑麦的照片">
+            </div>
+            <div class="profile-info">
+                <h3>黑麦</h3>
+                <p>iOS 开发爱好者 | 大二在读</p>
+                <p>嘿！移动应用开发简直太酷了😋！梦想就是进大厂赚大钱！！加油！</p>
+            </div>
+        </div>
+
+        <!-- 技术栈简述 -->
+        <h3>能力</h3>
+        <p>目前主要使用 Swift 和 SwiftUI 进行 iOS 开发，掌握 UIKit 、Coredata等，目前正在学习 ARKit 和 CoreML 。熟悉常用的开发工具，如 Xcode、CocoaPods 等。</p>
+
+        <!-- 开发项目 -->
+        <h3>我的项目</h3>
+        <ul>
+            <li>正儿八经的项目还没码出来呜呜呜</li>
+            <li>细碎的小demo倒是不少（！</li>
+        </ul>
+
+        <h3>未来目标</h3>
+        <p>参与更多项目，提升技术水平。变成大佬！</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 黑麦 | 版权所有</p>
+    </footer>
+
+</body>
+</html>
