@@ -3,57 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>应用名称 1 - 详细介绍</title>
+    <title>今天吃啥 - 详细介绍</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: #1a1a1a;
-            color: #f4f4f4;
+            background: #f5f5f5; /* 背景改为浅灰色 */
+            color: #333; /* 文字颜色改为深灰色 */
             margin: 0;
             padding: 0;
             overflow-x: hidden;
         }
+            /* 包裹按钮的容器 */
+            .cta-section {
+                display: flex;
+                justify-content: space-between; /* 将按钮分布在两侧 */
+                padding: 20px 50px; /* 给容器加一些左右内边距 */
+            }
+        
+            /* 按钮样式 */
+            .cta-btn {
+                display: inline-block;
+                padding: 12px 30px;
+                background-color: #1E90FF; /* 蓝色 */
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 30px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+        
+            .cta-btn:hover {
+                background-color: #1c7ed6; /* 按钮悬浮时的颜色 */
+                transform: scale(1.05);
+            }
+       
 
-        header {
-            background: #222;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #00b0ff;
-        }
-
+        /* 主要内容区域 */
         .app-detail {
             text-align: center;
             max-width: 1200px;
             margin: 50px auto;
-            background: #2c2c2c;
+            background: #ffffff; /* 白色背景 */
             border-radius: 8px;
             padding: 30px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
         }
 
@@ -64,7 +60,7 @@
         .app-detail h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            color: #00b0ff;
+            color: #1E90FF; /* 蓝色标题 */
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -73,7 +69,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 20px;
-            color: #bbb;
+            color: #555; /* 深灰色文字 */
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -82,12 +78,12 @@
         .app-detail h3 {
             font-size: 1.4rem;
             margin-top: 30px;
-            color: #fff;
+            color: #333; /* 深灰色 */
         }
 
         .cta-btn {
             display: inline-block;
-            background-color: #00b0ff;
+            background-color: #1E90FF; /* 蓝色按钮 */
             color: #fff;
             padding: 12px 30px;
             border-radius: 30px;
@@ -98,7 +94,7 @@
         }
 
         .cta-btn:hover {
-            background-color: #0099cc;
+            background-color: #1c7ed6; /* 按钮悬浮暗蓝色 */
             transform: scale(1.05);
         }
 
@@ -109,7 +105,7 @@
             align-items: center;
             margin-top: 40px;
             padding: 20px;
-            background: #3a3a3a;
+            background: #fafafa; /* 淡灰色背景 */
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
@@ -128,7 +124,7 @@
 
         .app-feature .text {
             max-width: 55%; /* 调整文字区域宽度 */
-            color: #ddd;
+            color: #333; /* 深灰色 */
             text-align: left;
         }
 
@@ -143,10 +139,10 @@
 
         .feature-item {
             width: 48%;
-            background: #4a4a4a;
+            background: #f0f0f0; /* 浅灰色背景 */
             border-radius: 10px;
             padding: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
             transition: transform 0.3s ease-in-out;
@@ -161,7 +157,7 @@
         }
 
         .feature-item .text {
-            color: #ddd;
+            color: #333; /* 深灰色 */
         }
 
         .feature-item:hover {
@@ -169,11 +165,11 @@
         }
 
         footer {
-            background: #222;
+            background: #333; /* 深灰色 */
             text-align: center;
             padding: 20px;
             margin-top: 50px;
-            color: #aaa;
+            color: #fff; /* 白色文字 */
         }
 
         footer p {
@@ -255,7 +251,6 @@
                             <p>界面设计简洁，零广告！转盘动画流畅迅速，结果显示清晰</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -275,18 +270,16 @@
                             <p>支持单项输入与一次性多项输入，人性化体验</p>
                         </div>
                     </div>
-                        <div class="feature-item">
-                            <img src="images/sh4.png" alt="更多功能" onclick="viewImage('images/sh4.png')">
-                            <div class="text">
-                                <h4>极速选择</h4>
-                                <p>快速选择当前转盘内容！</p>
-                            </div>
+                    <div class="feature-item">
+                        <img src="images/sh4.png" alt="更多功能" onclick="viewImage('images/sh4.png')">
+                        <div class="text">
+                            <h4>极速选择</h4>
+                            <p>快速选择当前转盘内容！</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
 
         <!-- 第三个版块，图文混排 -->
         <div class="app-feature">
@@ -302,21 +295,24 @@
                             <p>推荐时间精心设计，饭点外均为“别吃啦”！KO嘴馋大学生</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-        
 
         <!-- 用户评价 -->
         <h3>用户评价</h3>
-        <p>用户 A: "慢慢上手，对生活中的垃圾分类了解了不少！"</p>
-        <p>用户 B: "寓教于乐，潜移默化就懂了"</p>
-        <p>用户 C: "界面简洁易用，强烈推荐！"</p>
+        <p>用户 A: "开心的多炫了两碗饭"</p>
+        <p>用户 B: "没有夜宵，建议添加"</p>
+        <p>用户 C: "解决困扰我多年的炫饭问题！再也不会因为吃啥和闺蜜吵架了ww！"</p>
         <br>
         <hr>
         <br>
         <p>没有开发者账号，下载不了，想玩的可以联系我实机游玩或者给你项目zip</p>
+        <section class="cta-section">
+            <a href="app1.html" class="cta-btn">上一demo</a>
+            <a href="app3.html" class="cta-btn">下一demo</a>
+        </section>
+        
     </section>
 
     <footer>

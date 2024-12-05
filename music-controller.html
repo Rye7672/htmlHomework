@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐控制器</title>
+    <style>
+        /* 悬浮球样式 */
+        .music-toggle {
+            position: fixed; /* 悬浮在页面固定位置 */
+            bottom: 20px;
+            right: 20px;
+            width: 50px; /* 宽度 */
+            height: 50px; /* 高度，与宽度一致 */
+            background-color: #2575fc; /* 圆球背景色 */
+            color: #fff; /* 文本颜色 */
+            border-radius: 50%; /* 圆形 */
+            display: flex; /* 使用 flex 布局 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
+            cursor: pointer; /* 鼠标指针效果 */
+            z-index: 1000; /* 确保在页面最上层 */
+            font-size: 1.5rem; /* 图标大小 */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border: 2px solid transparent; /* 避免外部影响 */
+            overflow: hidden; /* 防止内容溢出 */
+            text-align: center; /* 文本居中 */
+        }
+    
+        .music-toggle:hover {
+            background-color: #6a11cb; /* 鼠标悬浮背景色变化 */
+            transform: scale(1.1); /* 鼠标悬浮放大效果 */
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio id="background-music" autoplay loop>
+        <source src="audio/background-music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <!-- 音乐控制悬浮球 -->
+    <div class="music-toggle" id="music-toggle" onclick="toggleMusic()">🔊</div>
+
+    <script>
+        const audio = document.getElementById('background-music');
+        const musicToggle = document.getElementById('music-toggle');
+    
+        function toggleMusic() {
+            if (audio.paused) {
+                audio.play();
+                musicToggle.textContent = '🔊'; // 播放时显示图标
+            } else {
+                audio.pause();
+                musicToggle.textContent = '🔇'; // 暂停时显示图标
+            }
+    
+            // 防止文字被复制
+            const range = document.createRange();
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            range.selectNode(document.body); // 转移焦点到页面
+            selection.addRange(range);
+            selection.removeAllRanges();
+        }
+    </script>
+    
+</body>
+</html>

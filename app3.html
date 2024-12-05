@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无线电 - 详细介绍</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5; /* 背景改为浅灰色 */
+            color: #333; /* 文字颜色改为深灰色 */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+            /* 包裹按钮的容器 */
+            .cta-section {
+                display: flex;
+                justify-content: space-between; /* 将按钮分布在两侧 */
+                padding: 20px 50px; /* 给容器加一些左右内边距 */
+            }
+        
+            /* 按钮样式 */
+            .cta-btn {
+                display: inline-block;
+                padding: 12px 30px;
+                background-color: #1E90FF; /* 蓝色 */
+                color: white;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 30px;
+                font-size: 1rem;
+                transition: all 0.3s ease;
+            }
+        
+            .cta-btn:hover {
+                background-color: #1c7ed6; /* 按钮悬浮时的颜色 */
+                transform: scale(1.05);
+            }
+        /* 主要内容区域 */
+        .app-detail {
+            text-align: center;
+            max-width: 1200px;
+            margin: 50px auto;
+            background: #ffffff; /* 白色背景 */
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-detail:hover {
+            transform: scale(1.02);
+        }
+
+        .app-detail h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1E90FF; /* 蓝色标题 */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .app-detail p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555; /* 深灰色文字 */
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .app-detail h3 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            color: #333; /* 深灰色 */
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #1E90FF; /* 蓝色按钮 */
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 30px;
+        }
+
+        .cta-btn:hover {
+            background-color: #1c7ed6; /* 按钮悬浮暗蓝色 */
+            transform: scale(1.05);
+        }
+
+        /* 图文混排效果 */
+        .app-feature {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #fafafa; /* 淡灰色背景 */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-feature:hover {
+            transform: scale(1.05);
+        }
+
+        .app-feature img {
+            max-width: 30%; /* 缩小最左侧图片 70% */
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer; /* 鼠标悬停时变为可点击 */
+        }
+
+        .app-feature .text {
+            max-width: 55%; /* 调整文字区域宽度 */
+            color: #333; /* 深灰色 */
+            text-align: left;
+        }
+
+        /* 子版块 */
+        .app-feature-four {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        .feature-item {
+            width: 48%;
+            background: #f0f0f0; /* 浅灰色背景 */
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .feature-item img {
+            max-width: 50%;
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .feature-item .text {
+            color: #333; /* 深灰色 */
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #333; /* 深灰色 */
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            color: #fff; /* 白色文字 */
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .app-detail {
+                padding: 20px;
+                max-width: 90%;
+            }
+
+            .app-feature {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .app-feature img {
+                max-width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .app-feature .text {
+                max-width: 80%;
+            }
+
+            .app-feature-four {
+                flex-direction: column;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .app-detail h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">主页</a></li>
+                <li><a href="app.html">应用展示</a></li>
+                <li><a href="learning-resources.html">学习资源</a></li>
+                <li><a href="about.html">关于我</a></li>
+                <li><a href="contact.html">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="app-detail">
+        <h2>摩尔斯电码</h2>
+        <p>摩斯电码练习，手到擒来！</p>
+
+        <!-- 第一个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ms1.png" alt="垃圾分类小游戏" onclick="viewImage('images/ms1.png')">
+            <div class="text">
+                <h3>界面精简</h3>
+                <p>符合无线电爱好者审美！界面简约大气！</p>
+                <div class="app-feature-four">
+                </div>
+            </div>
+        </div>
+
+        <!-- 第二个版块，图文混排 -->
+        <div class="app-feature">
+            <img src="images/ms2.png" alt="商品码扫描接入" onclick="viewImage('images/ms2.png')">
+            <div class="text">
+                <h3>练习界面清晰</h3>
+                <p>无广告，黑白简约，便于练习</p>
+                <div class="app-feature-four">
+                    <div class="feature-item">
+                        <img src="images/ms7.png" alt="更多功能" onclick="viewImage('images/ms7.png')">
+                        <div class="text">
+                            <h4>人性化设计</h4>
+                            <p>支持查看答案和跳过</p>
+                        </div>
+                    </div>
+                        <div class="feature-item">
+                            <img src="images/ms10.png" alt="更多功能" onclick="viewImage('images/ms10.png')">
+                            <div class="text">
+                                <h4>自动判断</h4>
+                                <p>自动验证答案，正确则跳到下一题</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 用户评价 -->
+        <h3>用户评价</h3>
+        <p>用户 A: "无线电证书到手！"</p>
+        <p>用户 B: "CQCQ！"</p>
+        <p>用户 C: "73～"</p>
+        <br>
+        <hr>
+        <br>
+        <p>第二个做的小demo😭一天搞定</p>
+        <p>没有开发者账号，下载不了，想玩的可以联系我实机游玩或者给你项目zip</p>
+        <section class="cta-section">
+            <a href="app2.html" class="cta-btn">上一demo</a>
+            <a href="app.html" class="cta-btn">返回主页</a>
+        </section>
+    
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 黑麦 | 版权所有</p>
+    </footer>
+
+    <!-- 图片查看 Modal -->
+    <div id="image-modal" style="display:none;">
+        <div style="background: rgba(0, 0, 0, 0.7); position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000;">
+            <img id="modal-image" src="" style="max-width: 80%; max-height: 80%; margin: auto; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        </div>
+    </div>
+
+    <script>
+        // 点击图片查看大图
+        function viewImage(imageUrl) {
+            document.getElementById("modal-image").src = imageUrl;
+            document.getElementById("image-modal").style.display = "block";
+        }
+
+        // 点击大图外部关闭查看
+        document.getElementById("image-modal").onclick = function() {
+            this.style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -4,14 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>黑麦的个人网站</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"> <!-- 引入艺术字体Lobster -->
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: white;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Sacramento', cursive; 
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: slideUp 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+            background: #2575fc;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #6a11cb;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* 悬浮球样式 */
+        .music-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #2575fc;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+            font-size: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .music-toggle:hover {
+            background-color: #6a11cb;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around; /* 块间距 */
+            flex-wrap: wrap; /* 在小屏幕自动换行 */
+            padding: 2rem 1rem;
+            background: #f4f4f4;
+        }
+    
+        .feature-block {
+            width: 30%; /* 块宽度 */
+            max-width: 300px; /* 最大宽度 */
+            margin: 1rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+    
+        .feature-block:hover {
+            transform: translateY(-8px); /* 悬浮抬升 */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* 增强阴影 */
+        }
+    
+        .feature-block h3 {
+            font-size: 1.8rem; /* 标题字体大小 */
+            color: #333;
+            margin-bottom: 1rem;
+        }
+    
+        .feature-block p {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+    
+        .feature-block .cta-btn {
+            font-size: 0.9rem;
+            padding: 0.7rem 1.5rem;
+            border-radius: 20px;
+        }
+    
+        @media screen and (max-width: 768px) {
+            .feature-block {
+                width: 80%; /* 小屏幕时块宽度 */
+            }
+        }
+    </style>
 </head>
 <body>
+
+
     <header>
-        <!-- <div class="logo">
-            <h1>黑麦的个人网站</h1>
-        </div> -->
         <nav>
             <ul>
                 <li><a href="index.html">主页</a></li>
@@ -25,21 +173,46 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h2>欢迎欢迎</h2>
+            <h2>麦门</h2>
+            <br>
+            <p>欢迎光临黑麦的个人网站！</p>
             <p>iOS开发小白，在努力学习全新技术！请多多指教！😋</p>
-            <br>
-            <br>
-            <a href="app.html" class="cta-btn">品鉴demo</a>
-            <a href="http://Rye7672.github.io" class="cta-btn">去看看博客</a>
-            <!-- <br>
-            <br>
-            <br>
-            <a href="http://Rye7672.github.io" class="cta-btn">去看看博客</a> -->
         </div>
     </section>
+    
+    <section class="features">
+        <div class="feature-block">
+            <h3>应用展示</h3>
+            <p>看看我做的一大堆小 demo ，体验创新和灵感！</p>
+            <a href="app.html" class="cta-btn">了解更多</a>
+        </div>
+        <div class="feature-block">
+            <h3>学习资源</h3>
+            <p>获取高质量的 iOS 学习资源，帮助你快速成长为开发者！</p>
+            <a href="learning-resources.html" class="cta-btn">开始学习</a>
+        </div>
+
+        <div class="feature-block">
+            <h3>个人博客</h3>
+            <p>查看我的博客，记录学习过程、开发心得和技术分享。</p>
+            <a href="http://Rye7672.github.io" class="cta-btn">阅读博客</a>
+        </div>
+    </section>
+    
+    
+    
+    
+    
+    <iframe 
+    src="music-controller.html" 
+    style="position: fixed; bottom: 0; right: 0; width: 90px; height: 90px; border: none; z-index: 1000;" 
+    scrolling="no">
+</iframe>
 
     <footer>
-        <p>&copy; 2024 电子商务2304 陈彦伊 | 版权所有</p>
+        <p>&copy; 电子商务2304 陈彦伊</p>
     </footer>
+
+    
 </body>
 </html>

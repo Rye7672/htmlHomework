@@ -5,8 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>应用展示 - 黑麦</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .app-gallery {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly; /* 等间距分布 */
+        }
+
+        .app-gallery h2 {
+            font-size: 2.8rem;
+            color: #222;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        .app-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: calc(33.333% - 20px); /* 三列布局，减去间距 */
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center; /* 内容居中 */
+        }
+
+        .app-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-item img {
+            width: 100%;
+            max-width: 250px; /* 限制图片最大宽度 */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .app-details {
+            flex: 1;
+        }
+
+        .app-details h3 {
+            font-size: 1.8rem;
+            color: #444;
+            margin-bottom: 15px;
+        }
+
+        .app-details p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00b0ff;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #007bbf;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #222;
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            margin-top: 50px;
+            border-radius: 12px;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .app-item {
+                width: calc(50% - 20px); /* 在1024px宽度下，显示为两列 */
+            }
+        }
+
+        @media (max-width: 800px) {
+            .app-gallery h2 {
+                font-size: 2.2rem; /* 减小标题字体 */
+            }
+
+            .app-item {
+                width: calc(100% - 20px); /* 在较小屏幕下，显示为一列 */
+                margin-bottom: 20px;
+            }
+
+            .app-item img {
+                max-width: 200px; /* 调整图片大小 */
+            }
+
+            .cta-btn {
+                font-size: 0.9rem; /* 调整按钮字体 */
+            }
+        }
+    </style>
 </head>
 <body>
+
+    <!-- 保留原顶部栏 -->
     <header>
         <nav>
             <ul>
@@ -19,40 +154,42 @@
         </nav>
     </header>
 
+    <!-- 应用展示内容 -->
     <section class="app-gallery">
-        <h2>我的小demo们</h2>
-        <br>
-        <br>
+        <h2>我的小 Demo </h2>
+
         <div class="app-item">
-            <br>
-            <img src="images/app1.jpg" alt="App 1" >
+            <img src="images/app1.jpg" alt="App 1">
             <div class="app-details">
-                <br>
                 <h3>绿源</h3>
-                <p>内有垃圾分类小游戏，同时嵌入AI大模型，可以通过<b>商品码识别</b>、<b>人工智能对话</b>进行垃圾分类！</p>
-                <br>
+                <p>内有垃圾分类小游戏，同时嵌入 AI 大模型，可以通过<b>商品码识别</b>、<b>人工智能对话</b>进行垃圾分类！</p>
                 <a href="app1.html" class="cta-btn">详细了解</a>
-                <br>
             </div>
-            <br>
         </div>
+
         <div class="app-item">
-            <br>
             <img src="images/app2.jpg" alt="App 2">
             <div class="app-details">
-                <br>
                 <h3>今天吃啥</h3>
                 <p>录入工大西苑各种美食，支持桌面小组件，终结不知道吃什么的人生难题！</p>
-                <br>
                 <a href="app2.html" class="cta-btn">详细了解</a>
-                <br>
             </div>
-            <br>
+        </div>
+
+        <div class="app-item">
+            <img src="images/app3.jpg" alt="App 3">
+            <div class="app-details">
+                <h3>MorseCodeExerciser</h3>
+                <p>亲手输入摩斯电码，感受无线电的魅力！</p>
+                <a href="app3.html" class="cta-btn">详细了解</a>
+            </div>
         </div>
     </section>
 
+    <!-- 页脚 -->
     <footer>
         <p>&copy; 2024 黑麦 | 版权所有</p>
     </footer>
+
 </body>
 </html>
