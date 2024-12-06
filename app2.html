@@ -15,6 +15,68 @@
             padding: 0;
             overflow-x: hidden;
         }
+
+        /* 导航栏样式 */
+nav {
+    background-color: #222; /* 设置背景色 */
+    padding: 10px 15px; /* 减小导航栏的内边距 */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between; /* 使菜单项之间间隔相等 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem; /* 字体大小略微减小 */
+    font-weight: 500;
+    padding: 8px 12px; /* 减小菜单项的内边距 */
+    margin: 0 5px; /* 增加菜单项之间的间距 */
+}
+
+nav ul li a:hover {
+    background-color: #00b0ff; /* 鼠标悬停时改变背景色 */
+    border-radius: 5px;
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    min-width: 160px; /* 减小下拉菜单的宽度 */
+    z-index: 1000;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block; /* 显示下拉菜单 */
+}
+
+nav .dropdown-content a {
+    padding: 8px 15px; /* 减小下拉菜单项的内边距 */
+    color: white;
+}
+
+nav .dropdown-content a:hover {
+    background-color: #00b0ff;
+}
+
             /* 包裹按钮的容器 */
             .cta-section {
                 display: flex;
@@ -219,7 +281,13 @@
             <ul>
                 <li><a href="index.html">主页</a></li>
                 <li><a href="app.html">应用展示</a></li>
-                <li><a href="learning-resources.html">学习资源</a></li>
+                <li class="dropdown">
+                    <a href="learning-resources.html" class="dropbtn">学习资源</a>
+                    <div class="dropdown-content">
+                        <a href="learning-resources.html">资源分享</a>
+                        <a href="blog.html">博客内容</a>
+                    </div>
+                </li>
                 <li><a href="about.html">关于我</a></li>
                 <li><a href="contact.html">联系方式</a></li>
             </ul>

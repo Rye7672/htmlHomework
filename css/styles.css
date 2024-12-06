@@ -10,41 +10,89 @@ body {
     background-color: #1f1f1f; /* 深色背景，提升科技感 */
     color: #e0e0e0; /* 更柔和的文字颜色 */
     line-height: 1.6;
+    position: relative; /* 允许在页面中添加浮动元素 */
 }
 
-/* 头部与导航栏样式 */
+
+       
 header {
-    background-color: #212121; /* 深色背景 */
-    padding: 20px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: #222222;
+    padding: 10px;
 }
-
-nav ul {
-    list-style: none;
+/* 导航栏样式 */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
-    margin-top: 10px;
 }
 
-nav ul li {
-    margin: 0 20px;
+header nav ul li {
+    margin: 0 10px; /* 调整菜单项之间的间距 */
+    position: relative;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+
+
+/* 下拉菜单样式 */
+.dropdown {
+    position: relative;
+}
+
+.dropdown .dropbtn {
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
     transition: color 0.3s ease;
+    box-sizing: border-box;
 }
 
-nav ul li a:hover {
-    color: #1E90FF; /* 蓝色 */
-    border-bottom: 2px solid #1E90FF; /* 蓝色 */
+
+
+/* 下拉菜单内容 */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1E90FF;
+}
+
+
+
+/* 保持导航栏的整体布局不变，避免在 hover 时改变尺寸 */
+header nav ul li {
+margin: 0 20px;
+position: relative;
+display: inline-block; /* 保证列表项排布为一行 */
+}
 /* Hero部分 */
 .hero {
     background: url('images/hero-bg.jpg') no-repeat center center;
